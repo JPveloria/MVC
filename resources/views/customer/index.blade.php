@@ -11,7 +11,7 @@
 </head>
 <body>
     <h3>Customer Data</h3>
-    <table class="table">
+    <table class="table table-success">
   <thead>
     <tr>
       <th scope="col">ID</th>
@@ -31,8 +31,8 @@
             <td>{{$customer->email}}</td>
             <td>{{$customer->contactNumber}}</td>
             <td>{{$customer->address}}</td>
-            <td><button type="button" class="btn btn-primary">Edit</button></td>
-            <td><button type="button" class="btn btn-primary">Delete</button></td>
+            <td><button type="button" class="btn btn-info">EDIT</button></td>
+            <td><button type="button" class="btn btn-danger">DELETE</button></td>
     </tr>
     @endforeach
   </tbody>
