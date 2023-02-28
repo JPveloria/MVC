@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Factories\Factory;
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Customer>
  */
-class CustomerFactory extends Factory
+class RoomFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -17,11 +17,10 @@ class CustomerFactory extends Factory
     public function definition()
     {
         return [
-            'lastname'=>fake()->lastname(),
-            'firstname'=>fake()->firstname(),
-            'email'=>fake()->safeemail(),
-            'address'=>fake()->address(),
-            'contactNumber'=>fake()->phoneNumber(),
+            'roomDescription'=>fake()->catchPhrase(),
+            'roomCapacity'=>fake()->randomNumber(),
+            'dateFrom'=>fake()->date($format = 'y-m-d', $max = 'now'),
+            'dateTo'=>fake()->date($format = 'y-m-d', $max = 'now'),
         ];
     }
 }

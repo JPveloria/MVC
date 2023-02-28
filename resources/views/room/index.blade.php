@@ -10,28 +10,26 @@
     <title>Document</title>
 </head>
 <body>
-    <h3>Customer Data</h3>
+    <h3>Room Data</h3>
     <table class="table table-success">
   <thead>
     <tr>
       <th scope="col">ID</th>
-      <th scope="col">First Name</th>
-      <th scope="col">Last Name</th>
-      <th scope="col">E-mail</th>
-      <th scope="col">Contact Number</th>
-      <th scope="col">Address</th>
+      <th scope="col">Room Description</th>
+      <th scope="col">Room Capacity</th>
+      <th scope="col">Date From</th>
+      <th scope="col">Date To</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-    @foreach($customers as $customer)
-        <th scope="row">1</th>
-            <td>{{$customer->firstname}}</td>
-            <td>{{$customer->lastname}}</td>
-            <td>{{$customer->email}}</td>
-            <td>{{$customer->contactNumber}}</td>
-            <td>{{$customer->address}}</td>
-            <td><button type="button" class="btn btn-info">EDIT</button></td>
+    @foreach($rooms as $room)
+            <td>{{$room->id}}</td>
+            <td>{{$room->roomDescription}}</td>
+            <td>{{$room->roomCapacity}}</td>
+            <td>{{$room->dateFrom}}</td>
+            <td>{{$room->dateTo}}</td>
+            <td><button type="button" class="btn btn-info">Book</button></td>
             <td><button type="button" class="btn btn-danger">DELETE</button></td>
     </tr>
     @endforeach

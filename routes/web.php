@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
-use App\Http\Controllers\CustomerController;
+use App\Http\Controllers\RoomController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,8 +14,8 @@ use App\Http\Controllers\CustomerController;
 |
 */
 
-Route::get('/', [CustomerController::class, 'index']);
+Route::get('/', [RoomController::class, 'index']);
 
 Route::get('/users', [UserController::class, 'index']);
 Route::get('/user/{id}', [UserController::class, 'show']);
-Route::get('/customers', [CustomerController::class, 'index']);
+Route::get('/rooms', [RoomController::class, 'index']);
